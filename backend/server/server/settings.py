@@ -28,9 +28,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['www.niterumachi.com']
+# ALLOWED_HOSTS = ['www.niterumachi.com', 'niteruamchi.com']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -84,14 +85,27 @@ WSGI_APPLICATION = 'server.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': env('DATABASE_NAME'),
+#         'HOST': env('DATABASE_HOST'),
+#         'USER': env('DATABASE_USER'),
+#         'PASSWORD': env('DATABASE_PASSWORD'),
+#         'PORT': '3306'
+#     }
+# }
+
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': env('DATABASE_NAME'),
-        'HOST': env('DATABASE_HOST'),
-        'USER': env('DATABASE_USER'),
-        'PASSWORD': env('DATABASE_PASSWORD'),
-        'PORT': '3306'
+        'NAME': 'clustering',
+        'USER': 'root',
+        'PASSWORD': 'xLceeRZc',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
 
@@ -153,4 +167,11 @@ REST_FRAMEWORK = {
 
 CORS_ORIGIN_WHITELIST = [
      'http://localhost:3000',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://niterumachi.com",
+    "https://www.niterumachi.com",
+    'http://localhost:3000',
+
 ]
