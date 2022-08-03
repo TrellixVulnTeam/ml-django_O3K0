@@ -12,7 +12,7 @@
 
 
 
-##### ホームページ
+#### ホームページ
 
 ![landing-page](https://user-images.githubusercontent.com/89641169/182645999-bb3eb4fb-3b49-4e9a-9d1c-22c217773a76.png)
 
