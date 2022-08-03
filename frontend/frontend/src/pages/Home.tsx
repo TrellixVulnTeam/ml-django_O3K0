@@ -40,6 +40,7 @@ const Home = () => {
               width: 'auto',
               minWidth: '100%', 
               height: '100%', 
+              minHeight: 850,
               position: 'relative',
             }}
           />
@@ -51,21 +52,22 @@ const Home = () => {
         >
           <Stack
             direction="column"
-            spacing={{ md: 5, xs: 6 }}
-            alignItems="center"
-            alignSelf="center"
+            spacing={{ md: 3, xs: 2 }}
+            alignItems="flex-start"
+            justifyContent="center"
             sx={{
-              p: 10,
+              pl: {xs: 3},
+              mt: 15,
               position: "absolute",
               minWidth: '80%',
-              top: { xl: "50%", lg: "48%", md: '50%', sm: '45%',xs: "60%" },
-              left: { xl: "30%", lg: "35%", xs: "50%" },
+              top: { xl: "44%", lg: "48%", md: '50%', xs: "46%" },
+              left: { xs: "50%" },
               transform: "translate(-50%, -50%)",
             
             }}
           >
             <Typography
-              variant="h2"
+              variant="h1"
               sx={{
                 fontWeight: 800,
                 fontFamily: "Yuji Syuku",
@@ -83,13 +85,13 @@ const Home = () => {
                 letterSpacing: ".2rem",
                 color: "#FFFF",
                 fontWeight: 600,
+                p: 2
               }}
             >
               〜帰省気分を味わう〜
             </Typography>
 
             <Typography
-              mt={2}
               variant="h5"
               sx={{
                 fontFamily: "Hina Mincho",
@@ -98,10 +100,34 @@ const Home = () => {
                 textShadow: '0 2px 3px rgba(0, 0, 0, 0.3)'
               }}
             >
-              近場にあなたの故郷に似ている町があるかも...
+              「仕事が忙しくて、帰省する余裕がない」 「コロナ禍で地元に帰りづらい」
             </Typography>
 
-            <Stack alignItems="flex-start" alignSelf="center">
+            <Typography
+              variant="h5"
+              sx={{
+                fontFamily: "Hina Mincho",
+                color: "#FFFF",
+                fontWeight: 700,
+                textShadow: '0 2px 3px rgba(0, 0, 0, 0.3)'
+              }}
+            >
+              地元に帰りたくても帰れないと感じることはありませんか。
+            </Typography>
+            <Typography
+              variant="h5"
+              sx={{
+                fontFamily: "Hina Mincho",
+                color: "#FFFF",
+                fontWeight: 700,
+                textShadow: '0 2px 3px rgba(0, 0, 0, 0.3)'
+              }}
+            >
+              にてるまちはあなたの地元に「似てる町」を案内するサービスです。
+            </Typography>
+            
+
+            <Stack alignItems="center" sx={{ pt: 5 }}>
               <Link to="/search" style={{ textDecoration: "none" }}>
                 <Button
                   variant="outlined"
@@ -110,7 +136,8 @@ const Home = () => {
                     p: "1.0rem",
                     width: 170,
                     fontSize: "1.2rem",
-                    fontFamily: "Sawarabi Gothic",
+                    fontWeight: 600,
+                    fontFamily:  "Hina Mincho",
                     color: "#FFFF",
                     bgcolor: "#ef6c00",
                     borderRadius: "15px",
