@@ -26,7 +26,7 @@
 - フロントエンド
   - TypeScript
   - React 18.2.0
-  - mui
+  - MUI
   - Rakuten Travel APIs
 
 - バックエンド
